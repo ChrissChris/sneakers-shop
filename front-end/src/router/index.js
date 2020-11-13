@@ -22,6 +22,10 @@ const routes = [
     name: "Cart",
     component: CartPage,
   },
+  {
+    path: "/",
+    redirect: "/products",
+  },
 ];
 
 const router = new VueRouter({
