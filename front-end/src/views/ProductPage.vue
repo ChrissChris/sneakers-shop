@@ -1,10 +1,27 @@
 <template>
-  <h1>This is Product Page</h1>
+  <div id="page-wrap">
+    <div class="grid-wrap">
+      <div v-for="product in products" :key="product.id" class="product-item">
+        <img :src="sneakers.imageUrl" />
+        <h1 class="product-name">{{ product.name }}</h1>
+        <p class="product-price">$ {{ product.price }}</p>
+        <router-link :to="'/product' + product.id">
+          <button>View Details</button>
+        </router-link>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
+import { products } from "@/sneakers-data.js";
 export default {
-  name: "ProfuctPage",
+  name: "ProductPage",
+  data() {
+    return {
+      products,
+    };
+  },
 };
 </script>
 
