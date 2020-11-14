@@ -8,7 +8,10 @@
 <script>
 import Navbar from "@/components/Navbar";
 export default {
-  name: "Navbar",
+  name: "App",
+  components: {
+    Navbar,
+  },
 };
 </script>
 
@@ -25,7 +28,7 @@ export default {
 }
 
 button {
-  background-color: black;
+  background-color: #5ea6e8;
   border: none;
   border-radius: 8px;
   color: white;
