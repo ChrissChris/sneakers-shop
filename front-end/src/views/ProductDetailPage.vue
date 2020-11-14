@@ -1,5 +1,5 @@
 <template>
-  <div id="page-wrap">
+  <div id="page-wrap" v-if="product">
     <div id="img-wrap">
       <img v-bind:src="product.imageUrl" />
     </div>
@@ -12,12 +12,14 @@
       <p>{{ product.description }}</p>
     </div>
   </div>
+  <not-found-page v-else />
 </template>
 
 <script>
 import { products } from "../shoes-data";
-
+import NotFoundPage from "@/views/NotFoundPage.vue";
 export default {
+  components: { NotFoundPage },
   name: "ProductDetailPage",
   data() {
     return {
