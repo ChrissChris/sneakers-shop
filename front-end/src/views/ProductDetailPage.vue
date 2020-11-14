@@ -12,15 +12,18 @@
       <p>{{ product.description }}</p>
     </div>
   </div>
-  <not-found-page v-else />
+  <NotFoundPage v-else />
 </template>
 
 <script>
 import { products } from "../shoes-data";
-import NotFoundPage from "@/views/NotFoundPage.vue";
+import NotFoundPage from "./NotFoundPage";
+
 export default {
-  components: { NotFoundPage },
   name: "ProductDetailPage",
+  components: {
+    NotFoundPage,
+  },
   data() {
     return {
       product: products.find((p) => p.id === this.$route.params.id),
