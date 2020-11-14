@@ -1,5 +1,5 @@
 <template>
-  <h1>This is Cart Page</h1>
+  <h1>This is the Shopping Cart Page</h1>
 </template>
 
 <script>
@@ -8,7 +8,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 h1 {
   border-bottom: 1px solid black;
   margin: 0;
