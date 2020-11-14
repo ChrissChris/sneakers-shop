@@ -1,12 +1,12 @@
 <template>
-  <div class="page-wrap">
-    <div class="img-wrap">
-      <img :src="product.imageUrl" />
+  <div id="page-wrap">
+    <div id="img-wrap">
+      <img v-bind:src="product.imageUrl" />
     </div>
     <div id="product-details">
       <h1>{{ product.name }}</h1>
-      <h3 id="price">{{ product.price }}</h3>
-      <p>Avarage rating {{ product.avarageRating }}</p>
+      <h3 id="price">${{ product.price }}</h3>
+      <p>Average rating: {{ product.averageRating }}</p>
       <button id="add-to-cart">Add to Cart</button>
       <h4>Description</h4>
       <p>{{ product.description }}</p>
@@ -15,6 +15,8 @@
 </template>
 
 <script>
+import { products } from "../shoes-data";
+
 export default {
   name: "ProductDetailPage",
   data() {
